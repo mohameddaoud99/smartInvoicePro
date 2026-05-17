@@ -35,29 +35,17 @@ services:
       - "8080:8080"
 
     environment:
-      SPRING_DATASOURCE_URL: "jdbc:postgresql://db:5432/smartinvoicepro"
-      SPRING_DATASOURCE_USERNAME: "postgres"
-      SPRING_DATASOURCE_PASSWORD: "postgres"
+      # LOCAL DB (Docker only for dev)
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/smartinvoicepro
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+
+      # PROD READY (Supabase override later)
+      # SPRING_PROFILES_ACTIVE: prod
 
     depends_on:
       db:
         condition: service_healthy
-
-    networks:
-      - smartinvoice-network
-
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-
-    container_name: smartinvoice-frontend
-
-    ports:
-      - "80:80"
-
-    depends_on:
-      - backend
 
     networks:
       - smartinvoice-network
