@@ -1,0 +1,84 @@
+########################################
+#  SYSTEM FILES
+########################################
+.DS_Store
+Thumbs.db
+
+########################################
+#  IDE (IntelliJ / VSCode / Eclipse)
+########################################
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+
+########################################
+# BACKEND (Spring Boot / Java)
+########################################
+/backend/target/
+*.log
+
+# Maven / Gradle
+.mvn/
+mvnw
+mvnw.cmd
+.gradle/
+build/
+
+# Java compiled files
+*.class
+
+########################################
+#  FRONTEND (Angular)
+########################################
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.angular/
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+########################################
+# ENV FILES (VERY IMPORTANT)
+########################################
+.env
+.env.*
+application-prod.yml
+application-dev.yml
+
+########################################
+# DOCKER
+########################################
+docker-compose.override.yml
+*.pid
+
+########################################
+# DATABASE / LOCAL DATA
+########################################
+*.sqlite
+*.db
+postgres_data/
+
+########################################
+# 🔥 LOGS
+########################################
+logs/
+*.log
+
+########################################
+# 🔥 SECURITY / SECRETS
+########################################
+*.key
+*.pem
+*.p12
+*.jks
+
+########################################
+# 🔥 OS / TEMP FILES
+########################################
+*.swp
+*.swo
+*~

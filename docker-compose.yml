@@ -1,0 +1,70 @@
+services:
+  db:
+    image: postgres:17
+
+    container_name: smartinvoice-db
+
+    environment:
+      POSTGRES_DB: smartinvoicepro
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    networks:
+      - smartinvoice-network
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+    container_name: smartinvoice-backend
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://db:5432/smartinvoicepro"
+      SPRING_DATASOURCE_USERNAME: "postgres"
+      SPRING_DATASOURCE_PASSWORD: "postgres"
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+    networks:
+      - smartinvoice-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+
+    container_name: smartinvoice-frontend
+
+    ports:
+      - "80:80"
+
+    depends_on:
+      - backend
+
+    networks:
+      - smartinvoice-network
+
+networks:
+  smartinvoice-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
