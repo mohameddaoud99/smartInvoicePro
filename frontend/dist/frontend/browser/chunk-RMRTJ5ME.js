@@ -1,0 +1,1 @@
+import"./chunk-7CGTOI24.js";var t=[{path:"",loadComponent:()=>import("./chunk-C6YFYKTJ.js").then(o=>o.QuotationListComponent)},{path:"new",loadComponent:()=>import("./chunk-OO5TMI6F.js").then(o=>o.QuotationFormComponent)},{path:":id/edit",loadComponent:()=>import("./chunk-OO5TMI6F.js").then(o=>o.QuotationFormComponent)}];export{t as quotationRoutes};

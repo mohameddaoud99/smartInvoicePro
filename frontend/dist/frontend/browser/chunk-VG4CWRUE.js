@@ -1,0 +1,1 @@
+import{a as e}from"./chunk-24T2QWTU.js";import{f as r}from"./chunk-DG5NHD5F.js";import{S as t}from"./chunk-IAEIER5J.js";var i=o=>()=>{let a=t(e),n=t(r);return a.hasRole(o)?!0:(n.navigate(["/dashboard"]),!1)},d=i("ROLE_ADMIN");export{d as a};

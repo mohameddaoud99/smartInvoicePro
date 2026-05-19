@@ -1,0 +1,1 @@
+import{a as o}from"./chunk-VG4CWRUE.js";import"./chunk-24T2QWTU.js";import"./chunk-6RFEAKEW.js";import"./chunk-DG5NHD5F.js";import"./chunk-IAEIER5J.js";import"./chunk-7CGTOI24.js";var m=[{path:"",canActivate:[o],loadComponent:()=>import("./chunk-62YXPVVS.js").then(t=>t.RoleListComponent)}];export{m as roleRoutes};

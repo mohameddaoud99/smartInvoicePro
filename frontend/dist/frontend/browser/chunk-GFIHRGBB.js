@@ -1,0 +1,1 @@
+import"./chunk-7CGTOI24.js";var t=[{path:"",loadComponent:()=>import("./chunk-YATQL6FH.js").then(o=>o.CategoryListComponent)},{path:"new",loadComponent:()=>import("./chunk-QZDAPEZX.js").then(o=>o.CategoryFormComponent)},{path:":id/edit",loadComponent:()=>import("./chunk-QZDAPEZX.js").then(o=>o.CategoryFormComponent)}];export{t as categoryRoutes};
