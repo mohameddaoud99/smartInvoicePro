@@ -17,8 +17,9 @@ public class CorsConfig {
         config.setAllowedOrigins(List.of(
                 "http://localhost:4200",
                 "http://localhost",
-                "https://smartInvoicePro.vercel.app"
-        ));
+                "https://smart-invoice-ou6xrcq0n-mohameddaoud99s-projects.vercel.app"
+
+                        ));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
